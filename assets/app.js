@@ -4,8 +4,8 @@ const root=document.documentElement;
 const savedTheme=localStorage.getItem('jn-theme')||'light'; root.dataset.theme=savedTheme;
 if(localStorage.getItem('jn-dir')==='rtl') document.body.classList.add('rtl');
 const $=(s)=>document.querySelector(s);
-window.toggleTheme=function(){root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem('jn-theme',root.dataset.theme);toast(root.dataset.theme==='dark'?'Dark mode enabled':'Light mode enabled')}
-window.toggleRTL=function(){document.body.classList.toggle('rtl');localStorage.setItem('jn-dir',document.body.classList.contains('rtl')?'rtl':'ltr');toast(document.body.classList.contains('rtl')?'RTL layout enabled':'LTR layout enabled')}
+window.toggleTheme=function(){root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem('jn-theme',root.dataset.theme)}
+window.toggleRTL=function(){document.body.classList.toggle('rtl');localStorage.setItem('jn-dir',document.body.classList.contains('rtl')?'rtl':'ltr')}
 window.toggleMobile=function(){const n=$('.nav'); if(n)n.classList.toggle('open')}
 window.togglePortal=function(btn){const m=$('.portal-menu');if(m){m.classList.toggle('open');if(btn)btn.setAttribute('aria-expanded',m.classList.contains('open')?'true':'false')}}
 window.toggleContact=function(){const m=$('.portal-menu');if(m)m.classList.toggle('open')}
