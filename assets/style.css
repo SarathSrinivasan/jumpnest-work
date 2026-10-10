@@ -115,3 +115,26 @@
 }
 body.rtl .home2-ribbon-grid>div{direction:rtl;text-align:right}
 body.rtl .home2-zones article,body.rtl .card,body.rtl .image-card .inside{ text-align:right }
+
+/* Dashboard/profile refinement */
+.app-page .dash-shell{min-height:100vh;align-items:start}
+.app-page .sidebar{z-index:95;overscroll-behavior:contain}
+.app-page .dash-main{min-width:0}
+.app-page .dash-profile-chip{direction:ltr;flex-wrap:wrap}
+.app-page .dash-profile-chip .btn,.app-page .dash-profile-chip .icon-btn{direction:ltr;unicode-bidi:isolate;white-space:nowrap}
+.app-page .dash-top{align-items:center}
+.app-page .side-link{line-height:1.45;white-space:normal}
+.profile-layout .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 22px;padding:22px;margin-top:14px;background:var(--surface);border:1px solid var(--line);border-radius:20px;align-content:start}
+.profile-layout .form-grid>label{display:flex;flex-direction:column;gap:7px;min-width:0;font-size:12px;font-weight:800;color:var(--ink)}
+.profile-layout .form-grid>label input,.profile-layout .form-grid>label select,.profile-layout .form-grid>label textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:46px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.45;box-shadow:none}
+.profile-layout .form-grid>label textarea{min-height:112px;resize:vertical}
+.profile-layout .form-grid>label.full{grid-column:1/-1}
+.profile-layout .form-grid .form-actions{grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap;padding-top:4px}
+.profile-layout .form-grid .form-actions .btn{min-width:110px}
+.app-page .panel,.app-page .kpi{min-width:0}
+.app-page [id]{scroll-margin-top:22px}
+.rtl .app-page .dash-profile-chip,.rtl .app-page .dash-profile-chip .btn,.rtl .app-page .dash-profile-chip .icon-btn{direction:ltr}
+.rtl .app-page .dash-top{direction:rtl}
+.rtl .app-page .profile-layout .form-grid>label{text-align:right}
+@media(max-width:1000px){.profile-layout .form-grid{grid-template-columns:1fr}.profile-layout .form-grid>label.full{grid-column:auto}.app-page .dash-top{flex-wrap:wrap}.app-page .dash-profile-chip{justify-content:flex-start}}
+@media(max-width:640px){.profile-layout .form-grid{padding:16px;gap:14px}.profile-layout .form-grid .form-actions{flex-direction:row}.profile-layout .form-grid .form-actions .btn{width:auto;flex:1}.app-page .dash-profile-chip{gap:7px}.app-page .dash-profile-chip .btn{font-size:12px;padding:10px 12px}}
